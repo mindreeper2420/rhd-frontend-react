@@ -22,7 +22,7 @@ const AppLayout: React.FunctionComponent<IAppLayout> = ({children}) => {
   };
   const Header = (
     <PageHeader
-      logo="Patternfly"
+      logo="RHD Frontend"
       logoProps={logoProps}
       toolbar="Toolbar"
     />
