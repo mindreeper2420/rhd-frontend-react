@@ -1,4 +1,11 @@
-# Patternfly Seed
+# RHD Frontend w/React
+This is a demo repo of the RHD Frontend running on React. For demonstration purposes only.
+
+Based off of the [PatternFly Seed](https://github.com/patternfly/patternfly-react-seed) repository.
+
+----
+
+## Patternfly Seed
 
 Patternfly Seed is an open source build scaffolding utility for web apps. The primary purpose of this project is to give developers a jump start when creating new projects that will use patternfly. A secondary purpose of this project is to serve as a reference for how to configure various aspects of an application that uses patternfly, webpack, react, typescript, etc.
 
@@ -6,7 +13,7 @@ Out of the box you'll get an app layout with chrome (header/sidebar), routing, b
 
 <img width="1058" alt="Out of box dashboard view of patternfly seed" src="https://user-images.githubusercontent.com/5942899/62715686-fa954980-b9ce-11e9-9fc2-217b7a4d1d81.png">
 
-## Quick-start
+### Quick-start
 ```bash
 npm install yarn -g # ensure you have yarn on your machine globally
 git clone https://github.com/patternfly/patternfly-react-seed # clone the project
@@ -15,7 +22,7 @@ yarn # install patternfly-react-seed dependencies
 yarn build # build the project
 yarn start # start the development server
 ```
-## Development Scripts
+### Development Scripts
 
 Install development/build dependencies
 `yarn`
@@ -38,13 +45,13 @@ Run the code formatter
 Launch a tool to inspect the bundle size
 `yarn bundle-profile:analyze`
 
-## Configurations
+### Configurations
 * [TypeScript Config](./tsconfig.json)
 * [Webpack Config](./webpack.common.js)
 * [Jest Config](./jest.config.js)
 * [Editor Config](./.editorconfig)
 
-## Raster Image Support
+### Raster Image Support
 
 To use an image asset that's shipped with patternfly core, you'll prefix the paths with "@assets". `@assets` is an alias for the patternfly assets directory in node_modules.
 
@@ -61,7 +68,7 @@ import loader from '@app/assets/images/loader.gif';
 <img src={loader} alt="Content loading />
 ```
 
-## Vector Image Support
+### Vector Image Support
 Inlining SVG in the app's markup is also possible.
 
 ```js
@@ -76,7 +83,7 @@ body {
 }
 ```
 
-## Code Quality Tools
+### Code Quality Tools
 * For accessibility compliance, we use [react-axe](https://github.com/dequelabs/react-axe)
 * To keep our bundle size in check, we use [webpack-bundle-analyzer](https://github.com/webpack-contrib/webpack-bundle-analyzer)
 * To keep our code formatting in check, we use [prettier](https://github.com/prettier/prettier)
