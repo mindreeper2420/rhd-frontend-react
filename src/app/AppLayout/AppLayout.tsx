@@ -7,7 +7,6 @@ import {
   NavVariants,
   Page,
   PageHeader,
-  PageSidebar,
   SkipToContent
 } from '@patternfly/react-core';
 import { routes } from '@app/routes';
@@ -21,26 +20,11 @@ const AppLayout: React.FunctionComponent<IAppLayout> = ({children}) => {
     href: '/',
     target: '_blank'
   };
-  const [isNavOpen, setIsNavOpen] = React.useState(true);
-  const [isMobileView, setIsMobileView] = React.useState(true);
-  const [isNavOpenMobile, setIsNavOpenMobile] = React.useState(false);
-  const onNavToggleMobile = () => {
-    setIsNavOpenMobile(!isNavOpenMobile);
-  };
-  const onNavToggle = () => {
-    setIsNavOpen(!isNavOpen);
-  }
-  const onPageResize = (props: { mobileView: boolean; windowSize: number }) => {
-    setIsMobileView(props.mobileView);
-  };
   const Header = (
     <PageHeader
       logo="Patternfly"
       logoProps={logoProps}
       toolbar="Toolbar"
-      showNavToggle={true}
-      isNavOpen={isNavOpen}
-      onNavToggle={isMobileView ? onNavToggleMobile : onNavToggle}
     />
   );
 
@@ -57,11 +41,6 @@ const AppLayout: React.FunctionComponent<IAppLayout> = ({children}) => {
       </NavList>
     </Nav>
   );
-  const Sidebar = (
-    <PageSidebar
-      nav={Navigation}
-      isNavOpen={isMobileView ? isNavOpenMobile : isNavOpen} />
-  );
   const PageSkipToContent = (
     <SkipToContent href="#primary-app-container">
       Skip to Content
@@ -71,8 +50,6 @@ const AppLayout: React.FunctionComponent<IAppLayout> = ({children}) => {
     <Page
       mainContainerId="primary-app-container"
       header={Header}
-      sidebar={Sidebar}
-      onPageResize={onPageResize}
       skipToContent={PageSkipToContent}>
       {children}
     </Page>

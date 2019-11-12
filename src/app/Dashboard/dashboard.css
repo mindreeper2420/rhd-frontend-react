@@ -1,0 +1,5 @@
+.pf-l-grid > * {
+  border: 1px dashed #000;
+  font-weight: 700;
+  padding: 1em;
+}
