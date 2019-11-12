@@ -1,9 +1,9 @@
 {
-  "name": "patternfly-seed",
-  "version": "0.0.1",
-  "description": "An open source build scaffolding utility for web apps.",
+  "name": "rhd-frontend-react",
+  "version": "0.0.2-development",
+  "description": "An open source build scaffolding utility for the RHD Frontend.",
   "main": "index.js",
-  "repository": "https://github.com/patternfly/patternfly-react-seed.git",
+  "repository": "https://github.com/mindreeper2420/rhd-frontend-react.git",
   "license": "MIT",
   "private": true,
   "scripts": {
